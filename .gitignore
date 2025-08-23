@@ -1,36 +1,324 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==========================================
+# Wish Directory - Production .gitignore
+# Next.js 14 + TypeScript + Supabase + PWA
+# ==========================================
 
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.js
+.yarn/install-state.gz
 
-# testing
-/coverage
+# Testing & Coverage
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+playwright/.cache/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+__tests__/coverage/
 
-# next.js
-/.next/
-/out/
+# Next.js
+.next/
+out/
+dist/
+build/
+.vercel/
+.turbo/
 
-# production
-/build
+# Production
+*.production
+build/
+dist/
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Debug & Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
 
-# local env files
-.env*.local
+# Environment Variables
 .env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+.env*.local
+!.env.example
+!.env.template
 
-# vercel
-.vercel
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
+**/supabase/.env
+supabase/.env
+.supabase/
 
-# typescript
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+.database/
+database.sqlite
+
+# API Keys & Secrets
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+.credentials/
+service-account-*.json
+
+# IDE & Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+.history/
+*.tmp
+*.temp
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Cache & Temporary Files
+.cache/
+.parcel-cache/
+.temp/
+.tmp/
+tmp/
+temp/
+.sass-cache/
+.eslintcache
+.stylelintcache
+.prettiercache
+*.cache
+
+# Bundle Analysis
+.webpack-stats.json
+.bundle-stats.json
+analyze/
+.size-limit.json
+
+# PWA & Service Worker
+public/sw.js
+public/workbox-*.js
+public/worker-*.js
+public/sw.js.map
+public/workbox-*.js.map
+public/worker-*.js.map
+public/precache-manifest*.js
+
+# Static Files (Generated)
+public/sitemap*.xml
+public/robots.txt
+public/manifest.json
+!public/manifest.template.json
+public/rss.xml
+public/feed.xml
+
+# Uploaded Files & User Content
+uploads/
+public/uploads/
+public/avatars/
+public/user-content/
+media/
+files/
+user-uploads/
+
+# Payment & Sensitive Data
+invoices/
+receipts/
+*.csv
+!sample-*.csv
+!test-*.csv
+reports/
+financial-reports/
+tax-documents/
+
+# Monitoring & Analytics
+.sentryclirc
+sentry.properties
+analytics-reports/
+google-analytics/
+mixpanel-reports/
+
+# Documentation (Generated)
+docs/_site/
+docs/.jekyll-cache/
+api-docs/
+storybook-static/
+typedoc/
+
+# Build Artifacts
+lib-cov/
+*.tgz
+*.zip
+*.tar.gz
+*.rar
+
+# Package Manager
+package-lock.json
+!package-lock.json
+yarn.lock
+!yarn.lock
+pnpm-lock.yaml
+!pnpm-lock.yaml
+
+# Backup Files
+*.backup
+*.bak
+*.old
+backup/
+backups/
+
+# Terraform (If using for infrastructure)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Docker (If containerizing)
+.dockerignore
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Miscellaneous
+*.orig
+.grunt/
+bower_components/
+jspm_packages/
+web_modules/
+*.log.*
+.nuxt/
+.output/
+.nitro/
+.data/
+
+# Project Specific
+/wishboard-exports/
+/admin-downloads/
+/moderation-queue/
+/pending-wishboards/
+.wishboards-cache/
+affiliate-reports/
+commission-reports/
+creator-payouts/
+search-index/
+recommendation-cache/
+
+# Local Development
+local-data/
+mock-data/
+dev-tools/
+scripts/local/
+.local-storage/
+indexed-db-export/
+
+# Performance Testing
+lighthouse-reports/
+performance-results/
+load-test-results/
+stress-test-output/
+
+# A/B Testing
+experiments/
+feature-flags-local.json
+ab-test-results/
+
+# Keep these files
+!.gitkeep
+!.nvmrc
+!.node-version
+!.prettierrc
+!.eslintrc.json
+!tsconfig.json
+!next.config.js
+!tailwind.config.ts
+!postcss.config.js
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+!SECURITY.md
+!.github/
+!public/favicon.ico
+!public/icons/
+!public/images/default/
+
+# Emergency & Maintenance
+maintenance-mode.flag
+emergency-shutdown.flag
+rate-limit-override.json
+
+# Wish Directory Specific Generated Files
+/generated-thumbnails/
+/wishboard-previews/
+/export-queue/
+/import-staging/
+/itunes-cache/
+/affiliate-cache/
+/trending-cache/
+.recommendations-model/
+/ml-models/*.pkl
+/ml-models/*.h5
+/user-embeddings/
+
+# Compliance & Legal
+/gdpr-exports/
+/data-deletion-requests/
+/dmca-notices/
+/audit-logs/*.log
+/compliance-reports/
+
+# End of Wish Directory .gitignore
