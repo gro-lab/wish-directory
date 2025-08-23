@@ -1,0 +1,67 @@
+{
+  "wishboards": [
+    {
+      "id": "ios-dev-2024",
+      "title": "Learn iOS App Development",
+      "description": "Complete roadmap to becoming an iOS developer in 2024",
+      "author": {
+        "id": "user-1",
+        "name": "Sarah Chen",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      "category": "Skills",
+      "tags": ["programming", "swift", "mobile", "career"],
+      "difficulty": "intermediate",
+      "estimatedTime": "3-6 months",
+      "stats": {
+        "views": 1247,
+        "saves": 89,
+        "items": 12
+      },
+      "coverGradient": "from-blue-500 to-purple-600",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "cozy-reading",
+      "title": "Build a Cozy Reading Corner",
+      "description": "Everything you need for the perfect reading sanctuary",
+      "author": {
+        "id": "user-2",
+        "name": "Marcus Williams",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus"
+      },
+      "category": "Lifestyle",
+      "tags": ["home", "reading", "cozy", "decor"],
+      "difficulty": "beginner",
+      "estimatedTime": "1 weekend",
+      "stats": {
+        "views": 892,
+        "saves": 67,
+        "items": 8
+      },
+      "coverGradient": "from-amber-500 to-orange-600",
+      "createdAt": "2024-01-10T15:30:00Z"
+    },
+    {
+      "id": "digital-minimalism",
+      "title": "Start Digital Minimalism",
+      "description": "Declutter your digital life and find focus",
+      "author": {
+        "id": "user-3",
+        "name": "Alex Rivera",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+      },
+      "category": "Lifestyle",
+      "tags": ["productivity", "minimalism", "focus", "wellness"],
+      "difficulty": "beginner",
+      "estimatedTime": "2 weeks",
+      "stats": {
+        "views": 2103,
+        "saves": 156,
+        "items": 10
+      },
+      "coverGradient": "from-green-500 to-teal-600",
+      "createdAt": "2024-01-08T09:15:00Z"
+    }
+  ]
+}
