@@ -2,14 +2,14 @@
 import { notFound } from 'next/navigation'
 import { ArrowLeft, Share2, Bookmark, Clock, User, Tag } from 'lucide-react'
 import Link from 'next/link'
-import sampleData from '@/data/sample-wishboards.json'
+import { getWishboardById } from '@/data'
 
 export default function WishboardDetailPage({ 
   params 
 }: { 
   params: { id: string } 
 }) {
-  const wishboard = sampleData.wishboards.find(wb => wb.id === params.id)
+  const wishboard = getWishboardById(params.id)
   
   if (!wishboard) {
     notFound()
@@ -41,9 +41,9 @@ export default function WishboardDetailPage({
                   {wishboard.category}
                 </span>
                 <span className={`px-3 py-1 rounded-full text-sm font-medium
-                  ${wishboard.difficulty === 'beginner' ? 'bg-green-100 text-green-700' : ''}
-                  ${wishboard.difficulty === 'intermediate' ? 'bg-yellow-100 text-yellow-700' : ''}
-                  ${wishboard.difficulty === 'advanced' ? 'bg-red-100 text-red-700' : ''}
+                  ${wishboard.difficulty === 'Beginner' ? 'bg-green-100 text-green-700' : ''}
+                  ${wishboard.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700' : ''}
+                  ${wishboard.difficulty === 'Advanced' ? 'bg-red-100 text-red-700' : ''}
                 `}>
                   {wishboard.difficulty}
                 </span>
@@ -120,11 +120,23 @@ export default function WishboardDetailPage({
           {/* Items Preview */}
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Items in this Wishboard</h2>
-            <div className="bg-gray-100 rounded-lg p-8 text-center">
-              <p className="text-gray-600">
-                Items will be displayed here in the next sprint
-              </p>
-            </div>
+            {wishboard.items && wishboard.items.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {wishboard.items.map((item) => (
+                  <div key={item.id} className="bg-gray-50 rounded-lg p-4">
+                    <h3 className="font-medium text-gray-900">{item.title}</h3>
+                    <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+                    <p className="text-sm font-medium text-indigo-600 mt-2">{item.price}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-gray-100 rounded-lg p-8 text-center">
+                <p className="text-gray-600">
+                  Items will be displayed here
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>

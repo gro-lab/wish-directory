@@ -1,67 +1,225 @@
 {
   "wishboards": [
     {
-      "id": "ios-dev-2024",
+      "id": "wb-001",
       "title": "Learn iOS App Development",
-      "description": "Complete roadmap to becoming an iOS developer in 2024",
+      "description": "Complete guide to building iOS applications with Swift and SwiftUI. Perfect for beginners who want to start their mobile development journey.",
       "author": {
-        "id": "user-1",
-        "name": "Sarah Chen",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+        "id": "user-001",
+        "name": "Alex Chen",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+        "bio": "Senior iOS Developer with 8 years of experience"
       },
       "category": "Skills",
-      "tags": ["programming", "swift", "mobile", "career"],
-      "difficulty": "intermediate",
+      "tags": ["ios", "swift", "mobile-development", "programming", "swiftui"],
+      "difficulty": "Intermediate",
       "estimatedTime": "3-6 months",
+      "coverGradient": "from-blue-400 to-purple-600",
+      "items": [
+        {
+          "id": "item-001",
+          "type": "itunes",
+          "title": "Swift Playgrounds",
+          "description": "Learn Swift in a fun way",
+          "url": "https://apps.apple.com/app/id908519492",
+          "imageUrl": "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/87/73/2e/87732e95-1b86-b3d0-9e55-14e09fbb9203/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.webp",
+          "price": "Free",
+          "source": "itunes",
+          "itunesId": "908519492"
+        },
+        {
+          "id": "item-002",
+          "type": "custom",
+          "title": "Stanford CS193p Course",
+          "description": "Free Stanford course on iOS development",
+          "url": "https://cs193p.sites.stanford.edu/",
+          "imageUrl": "https://via.placeholder.com/150",
+          "price": "Free"
+        },
+        {
+          "id": "item-003",
+          "type": "affiliate",
+          "title": "iOS 17 Programming for Beginners",
+          "description": "Comprehensive book on iOS development",
+          "url": "https://www.amazon.com/dp/1803235756",
+          "imageUrl": "https://via.placeholder.com/150",
+          "price": "$39.99",
+          "affiliateSource": "Amazon"
+        }
+      ],
       "stats": {
-        "views": 1247,
-        "saves": 89,
-        "items": 12
+        "views": 15234,
+        "saves": 892,
+        "shares": 234,
+        "items": 12,
+        "rating": 4.8
       },
-      "coverGradient": "from-blue-500 to-purple-600",
-      "createdAt": "2024-01-15T10:00:00Z"
+      "isPublic": true,
+      "isDraft": false,
+      "createdAt": "2024-01-15T10:00:00Z",
+      "updatedAt": "2024-01-20T15:30:00Z"
     },
     {
-      "id": "cozy-reading",
-      "title": "Build a Cozy Reading Corner",
-      "description": "Everything you need for the perfect reading sanctuary",
-      "author": {
-        "id": "user-2",
-        "name": "Marcus Williams",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus"
-      },
-      "category": "Lifestyle",
-      "tags": ["home", "reading", "cozy", "decor"],
-      "difficulty": "beginner",
-      "estimatedTime": "1 weekend",
-      "stats": {
-        "views": 892,
-        "saves": 67,
-        "items": 8
-      },
-      "coverGradient": "from-amber-500 to-orange-600",
-      "createdAt": "2024-01-10T15:30:00Z"
-    },
-    {
-      "id": "digital-minimalism",
+      "id": "wb-002",
       "title": "Start Digital Minimalism",
-      "description": "Declutter your digital life and find focus",
+      "description": "Simplify your digital life and focus on what matters. A practical guide to reducing digital clutter and improving mental clarity.",
       "author": {
-        "id": "user-3",
-        "name": "Alex Rivera",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+        "id": "user-002",
+        "name": "Sarah Johnson",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+        "bio": "Digital wellness coach and productivity expert"
       },
       "category": "Lifestyle",
-      "tags": ["productivity", "minimalism", "focus", "wellness"],
-      "difficulty": "beginner",
-      "estimatedTime": "2 weeks",
+      "tags": ["productivity", "minimalism", "digital-detox", "focus", "wellness"],
+      "difficulty": "Beginner",
+      "estimatedTime": "30 days",
+      "coverGradient": "from-green-400 to-teal-600",
+      "items": [
+        {
+          "id": "item-004",
+          "type": "itunes",
+          "title": "Forest: Focus for Productivity",
+          "description": "Stay focused with this gamified productivity app",
+          "url": "https://apps.apple.com/app/id866450515",
+          "imageUrl": "https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/97/8f/ee/978feea4-f406-daef-2bd9-f1fb7bf0bb3f/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.webp",
+          "price": "$3.99",
+          "source": "itunes",
+          "itunesId": "866450515"
+        },
+        {
+          "id": "item-005",
+          "type": "affiliate",
+          "title": "Digital Minimalism by Cal Newport",
+          "description": "Essential book on digital minimalism",
+          "url": "https://www.amazon.com/dp/0525536515",
+          "imageUrl": "https://via.placeholder.com/150",
+          "price": "$14.99",
+          "affiliateSource": "Amazon"
+        }
+      ],
       "stats": {
-        "views": 2103,
-        "saves": 156,
-        "items": 10
+        "views": 9876,
+        "saves": 567,
+        "shares": 145,
+        "items": 8,
+        "rating": 4.6
       },
-      "coverGradient": "from-green-500 to-teal-600",
-      "createdAt": "2024-01-08T09:15:00Z"
+      "isPublic": true,
+      "isDraft": false,
+      "createdAt": "2024-02-01T09:00:00Z",
+      "updatedAt": "2024-02-05T14:20:00Z"
+    },
+    {
+      "id": "wb-003",
+      "title": "Master Home Cooking",
+      "description": "Transform your cooking skills from basic to chef-level. Learn essential techniques, recipes, and kitchen management.",
+      "author": {
+        "id": "user-003",
+        "name": "Chef Marcus",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+        "bio": "Professional chef with 15 years of experience"
+      },
+      "category": "Hobbies",
+      "tags": ["cooking", "food", "recipes", "kitchen", "culinary"],
+      "difficulty": "Beginner",
+      "estimatedTime": "2-3 months",
+      "coverGradient": "from-orange-400 to-red-600",
+      "items": [],
+      "stats": {
+        "views": 8432,
+        "saves": 432,
+        "shares": 198,
+        "items": 15,
+        "rating": 4.7
+      },
+      "isPublic": true,
+      "isDraft": false,
+      "createdAt": "2024-01-20T11:00:00Z",
+      "updatedAt": "2024-01-25T16:45:00Z"
+    },
+    {
+      "id": "wb-004",
+      "title": "Build a Personal Brand",
+      "description": "Create a strong personal brand to advance your career. Learn social media strategy, content creation, and networking.",
+      "author": {
+        "id": "user-004",
+        "name": "Maya Patel",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Maya",
+        "bio": "Marketing strategist and personal branding expert"
+      },
+      "category": "Career",
+      "tags": ["marketing", "personal-brand", "social-media", "networking", "career"],
+      "difficulty": "Advanced",
+      "estimatedTime": "6 weeks",
+      "coverGradient": "from-purple-400 to-pink-600",
+      "items": [],
+      "stats": {
+        "views": 7654,
+        "saves": 398,
+        "shares": 167,
+        "items": 10,
+        "rating": 4.5
+      },
+      "isPublic": true,
+      "isDraft": false,
+      "createdAt": "2024-02-10T08:30:00Z",
+      "updatedAt": "2024-02-12T13:15:00Z"
+    },
+    {
+      "id": "wb-005",
+      "title": "Learn UI/UX Design",
+      "description": "Master the principles of user interface and user experience design. From wireframes to prototypes.",
+      "author": {
+        "id": "user-005",
+        "name": "Design Studio",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Studio",
+        "bio": "Award-winning design agency"
+      },
+      "category": "Skills",
+      "tags": ["design", "ui", "ux", "figma", "prototyping"],
+      "difficulty": "Intermediate",
+      "estimatedTime": "4 months",
+      "coverGradient": "from-indigo-400 to-blue-600",
+      "items": [],
+      "stats": {
+        "views": 6789,
+        "saves": 345,
+        "shares": 123,
+        "items": 18,
+        "rating": 4.9
+      },
+      "isPublic": true,
+      "isDraft": false,
+      "createdAt": "2024-01-28T10:00:00Z",
+      "updatedAt": "2024-02-02T11:30:00Z"
+    },
+    {
+      "id": "wb-006",
+      "title": "Start a Podcast",
+      "description": "Everything you need to launch your own podcast. From equipment to editing to distribution.",
+      "author": {
+        "id": "user-006",
+        "name": "Audio Pro",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Audio",
+        "bio": "Podcast production company"
+      },
+      "category": "Hobbies",
+      "tags": ["podcast", "audio", "content-creation", "media", "speaking"],
+      "difficulty": "Intermediate",
+      "estimatedTime": "2 months",
+      "coverGradient": "from-yellow-400 to-orange-600",
+      "items": [],
+      "stats": {
+        "views": 5432,
+        "saves": 289,
+        "shares": 98,
+        "items": 12,
+        "rating": 4.4
+      },
+      "isPublic": true,
+      "isDraft": false,
+      "createdAt": "2024-02-05T09:00:00Z",
+      "updatedAt": "2024-02-08T14:00:00Z"
     }
   ]
 }

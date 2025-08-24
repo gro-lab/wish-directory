@@ -1,7 +1,7 @@
 // src/app/page.tsx
 import HeroSection from '@/components/home/HeroSection'
 import WishboardCard from '@/components/wishboard/WishboardCard'
-import sampleData from '@/data/sample-wishboards.json'
+import { sampleWishboards } from '@/data'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sampleData.wishboards.map((wishboard) => (
+            {sampleWishboards.slice(0, 6).map((wishboard) => (
               <WishboardCard key={wishboard.id} wishboard={wishboard} />
             ))}
           </div>
