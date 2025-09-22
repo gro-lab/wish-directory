@@ -1,4 +1,4 @@
-# Minimal iOS Workflow - Guaranteed to Work
+# Ultra-Simple iOS Workflow - Uses Available Device Names
 name: iOS Build
 
 on:
@@ -15,32 +15,27 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       
-    - name: List Available Simulators
-      run: xcrun simctl list devices available
+    - name: Show Available Devices
+      run: |
+        echo "=== Available iOS Simulators ==="
+        xcrun simctl list devices available | grep iPhone
       
     - name: Build Project
       working-directory: ./WishDirectory
       run: |
-        # Find any available iPhone simulator
-        SIMULATOR=$(xcrun simctl list devices available | grep "iPhone" | head -1 | sed 's/.*(//g' | sed 's/).*//g')
-        echo "Building with simulator ID: $SIMULATOR"
-        
         xcodebuild build \
           -project WishDirectory.xcodeproj \
           -scheme WishDirectory \
-          -destination "id=$SIMULATOR" \
+          -destination 'platform=iOS Simulator,name=iPhone 16' \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO
           
-    - name: Test Project
+    - name: Test Project  
       working-directory: ./WishDirectory
       run: |
-        # Same simulator selection for tests
-        SIMULATOR=$(xcrun simctl list devices available | grep "iPhone" | head -1 | sed 's/.*(//g' | sed 's/).*//g')
-        
         xcodebuild test \
           -project WishDirectory.xcodeproj \
           -scheme WishDirectory \
-          -destination "id=$SIMULATOR" \
+          -destination 'platform=iOS Simulator,name=iPhone 16' \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO
