@@ -27,6 +27,20 @@
 		1770EF6E2E81735C0069EB71 /* WishDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1770EF7B2E81735E0069EB71 /* WishDirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishDirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1770EF852E81735E0069EB71 /* WishDirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishDirectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1770EF9F2E817BE00069EB71 /* WishlistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistApp.swift; sourceTree = "<group>"; };
+		1770EFA02E817C5A0069EB71 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		1770EFA12E817CBE0069EB71 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
+		1770EFA22E817D380069EB71 /* WishlistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistService.swift; sourceTree = "<group>"; };
+		1770EFA32E817E590069EB71 /* iTunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesService.swift; sourceTree = "<group>"; };
+		1770EFA42E817E690069EB71 /* URL+AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+AppStore.swift"; sourceTree = "<group>"; };
+		1770EFA52E81F8B20069EB71 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
+		1770EFA62E81F9310069EB71 /* AddAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppView.swift; sourceTree = "<group>"; };
+		1770EFA72E81F9510069EB71 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
+		1770EFA82E81F97A0069EB71 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		1770EFA92E81F99D0069EB71 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1770EFAA2E81FA780069EB71 /* AppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailView.swift; sourceTree = "<group>"; };
+		1770EFAB2E81FABB0069EB71 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1770EFAC2E81FC0B0069EB71 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +89,12 @@
 		1770EF652E81735C0069EB71 = {
 			isa = PBXGroup;
 			children = (
+				1770EF9E2E81778C0069EB71 /* Resources */,
+				1770EF9D2E8177830069EB71 /* Extensions */,
+				1770EF9B2E8177760069EB71 /* Components */,
+				1770EF9A2E81776F0069EB71 /* Views */,
+				1770EF992E8177660069EB71 /* Services */,
+				1770EF982E81775C0069EB71 /* Models */,
 				1770EF702E81735C0069EB71 /* WishDirectory */,
 				1770EF7E2E81735E0069EB71 /* WishDirectoryTests */,
 				1770EF882E81735E0069EB71 /* WishDirectoryUITests */,
@@ -90,6 +110,62 @@
 				1770EF852E81735E0069EB71 /* WishDirectoryUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1770EF982E81775C0069EB71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1770EFA02E817C5A0069EB71 /* UserSettings.swift */,
+				1770EF9F2E817BE00069EB71 /* WishlistApp.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1770EF992E8177660069EB71 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1770EFAC2E81FC0B0069EB71 /* NotificationService.swift */,
+				1770EFA32E817E590069EB71 /* iTunesService.swift */,
+				1770EFA22E817D380069EB71 /* WishlistService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1770EF9A2E81776F0069EB71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1770EFAB2E81FABB0069EB71 /* SettingsView.swift */,
+				1770EFA62E81F9310069EB71 /* AddAppView.swift */,
+				1770EFAA2E81FA780069EB71 /* AppDetailView.swift */,
+				1770EFA52E81F8B20069EB71 /* WishlistView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1770EF9B2E8177760069EB71 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1770EFA92E81F99D0069EB71 /* LoadingView.swift */,
+				1770EFA82E81F97A0069EB71 /* PriceView.swift */,
+				1770EFA72E81F9510069EB71 /* AppRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1770EF9D2E8177830069EB71 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1770EFA42E817E690069EB71 /* URL+AppStore.swift */,
+				1770EFA12E817CBE0069EB71 /* UserDefaults+Keys.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1770EF9E2E81778C0069EB71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
