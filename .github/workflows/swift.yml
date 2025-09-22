@@ -1,0 +1,89 @@
+# iOS CI/CD Workflow for Wish Directory
+# Builds and tests Xcode project located in WishDirectory/ subdirectory
+
+name: iOS Build & Test
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-14  # Latest macOS with Xcode 15+
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Select Xcode Version
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app/Contents/Developer
+      
+    - name: Show Xcode Version
+      run: xcodebuild -version
+      
+    - name: Show Available Simulators
+      run: xcrun simctl list devices available
+      
+    - name: Clean Build Folder
+      working-directory: ./WishDirectory
+      run: xcodebuild clean -project WishDirectory.xcodeproj -scheme WishDirectory
+      
+    - name: Build Project
+      working-directory: ./WishDirectory
+      run: |
+        xcodebuild build \
+          -project WishDirectory.xcodeproj \
+          -scheme WishDirectory \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0' \
+          -configuration Debug \
+          ONLY_ACTIVE_ARCH=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+          
+    - name: Run Unit Tests
+      working-directory: ./WishDirectory
+      run: |
+        xcodebuild test \
+          -project WishDirectory.xcodeproj \
+          -scheme WishDirectory \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0' \
+          -configuration Debug \
+          ONLY_ACTIVE_ARCH=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+          
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: |
+          ./WishDirectory/build/Logs/Test/*.xcresult
+          ./WishDirectory/DerivedData/Logs/Test/*.xcresult
+        retention-days: 30
+
+  # Optional: Build for different iOS versions
+  compatibility-test:
+    runs-on: macos-14
+    strategy:
+      matrix:
+        ios-version: ['16.0', '17.0']
+        device: ['iPhone 14', 'iPhone 15']
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Build for iOS ${{ matrix.ios-version }}
+      working-directory: ./WishDirectory
+      run: |
+        xcodebuild build \
+          -project WishDirectory.xcodeproj \
+          -scheme WishDirectory \
+          -destination 'platform=iOS Simulator,name=${{ matrix.device }},OS=${{ matrix.ios-version }}' \
+          -configuration Debug \
+          ONLY_ACTIVE_ARCH=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
