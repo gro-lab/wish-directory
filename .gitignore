@@ -1,36 +1,124 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Wish Directory iOS Project .gitignore
+# Repository structure: /README.md + /WishDirectory/ (Xcode project folder)
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Xcode User Data (anywhere in project)
+*.xcuserstate
+*.xcuserdatad/
+**/xcuserdata/
+WishDirectory/**/*.xcuserstate
+WishDirectory/**/xcuserdata/
 
-# testing
-/coverage
+# Build Products (Xcode project specific)
+WishDirectory/build/
+WishDirectory/DerivedData/
+WishDirectory/**/*.built
+WishDirectory/**/*.ipa
+WishDirectory/**/*.dSYM.zip
+WishDirectory/**/*.dSYM
 
-# next.js
-/.next/
-/out/
+# Archives (Xcode project specific)
+WishDirectory/**/*.xcarchive
 
-# production
-/build
+# CocoaPods (if added later to Xcode project)
+WishDirectory/Pods/
+WishDirectory/**/*.xcworkspace
 
-# misc
+# Carthage (if added later to Xcode project)
+WishDirectory/Carthage/Build/
+WishDirectory/Carthage/Checkouts/
+
+# Swift Package Manager (Xcode project specific)
+WishDirectory/.swiftpm/
+WishDirectory/**/*.xcworkspace
+
+# Accidental temporary files
+*.swp
+*.swo
+*~
 .DS_Store
-*.pem
 
-# debug
+# Xcode Breakpoints
+*.xcbkptlist
+
+# Xcode Schemes (keep shared ones)
+!*.xcscheme
+
+# Provisioning Profiles
+*.mobileprovision
+*.provisionprofile
+
+# Certificate files
+*.p12
+*.cer
+*.certSigningRequest
+
+# Simulator files
+*.app
+
+# Testing
+*.gcov
+*.gcno
+*.gcda
+
+# AppCode
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# iTunes Connect metadata (if using fastlane later)
+metadata/
+screenshots/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Backup files
+*.orig
+*.bak
+
+# Documentation build
+docs/build/
+
+# React Native (if web admin panel added later)
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-.env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Local development
+local.properties
